@@ -174,7 +174,7 @@ Precision-Recall tradeoff visualization:
 
 **Expected Performance Ceiling: 68-70% accuracy**
 
-### Why we can't achieve 90%+ accuracy:
+### 90%+ accuracy is challenging:
 
 - **Defender Variance** - Identical shots have different defensive contests
 - **Fatigue Fluctuations** - Physical/mental state varies game-to-game
@@ -189,40 +189,6 @@ Precision-Recall tradeoff visualization:
 3. **Vertical > Horizontal Position** - Y-coordinate (baseline to top of key) more important than X
 4. **Time Pressure is Real** - Time remaining accounts for 7% of prediction ability
 5. **Zone Performance Varies** - Model predicts restricted area shots much better than mid-range
-
-## Model Interpretation
-
-The Random Forest model achieves **66.1% accuracy** by:
-
-1. Identifying shot patterns (layups have higher success than jump shots)
-2. Accounting for distance decay (accuracy drops with distance)
-3. Recognizing zone-specific performance (corners vs top of key)
-4. Incorporating game pressure (time remaining in period)
-
-The model correctly identifies:
-- **70% of misses** (True Negative Rate)
-- **62% of makes** (True Positive Rate)
-
-This is significantly better than always guessing "make" (47.7% baseline).
-
-## Technical Details
-
-**Algorithm:** Random Forest Classifier
-- 100 decision trees
-- Max depth: 10
-- Min samples to split: 50
-- Trained on 9,476 shots
-- Tested on 2,370 shots
-
-**Evaluation Method:** 
-- 80/20 train-test split (stratified)
-- 5-fold cross-validation
-- Multiple performance metrics (accuracy, precision, recall, F1, AUC)
-
-**Feature Engineering:**
-- One-hot encoding for categorical variables
-- Calculated features (shot angle from coordinates)
-- Derived features (corner 3 indicator)
 
 ## License
 
