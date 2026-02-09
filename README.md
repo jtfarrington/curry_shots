@@ -123,22 +123,9 @@ Precision-Recall tradeoff visualization:
 
 **Total: 64 features** after one-hot encoding categorical variables
 
-## Output Files
-
 ### Model Files
 - `curry_shot_model.pkl` - Trained Random Forest classifier
 - `model_features.pkl` - List of 64 feature column names
-
-### Visualization Files
-- `viz_1_confusion_matrix.png` - Prediction accuracy breakdown
-- `viz_2_feature_importance.png` - Top 15 feature importances
-- `viz_3_model_performance.png` - Model comparison chart
-- `viz_4_precision_recall_f1.png` - Detailed metrics
-- `viz_5_make_rate_by_distance.png` - Distance calibration
-- `viz_6_performance_by_shot_type.png` - 2PT vs 3PT analysis
-- `viz_7_performance_by_zone.png` - Zone-based performance
-- `viz_8_roc_curve.png` - ROC curve and AUC
-- `viz_9_precision_recall_curve.png` - PR curve
 
 ## Future Improvements
 
